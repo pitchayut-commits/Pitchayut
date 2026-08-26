@@ -1489,14 +1489,14 @@ function bindMonthClicks(rootId){
 
 /* ---------- เมนูโอทีและสรรหา แสดงสดจากไฟล์จริงข้างเคียง ---------- */
 const FRAMES = {
-  ot:      {wrap:"otFrameWrap", link:"otOpen", rel:"../2.OT/TPC_OT_Dashboard.html", title:"รายงานชั่วโมงทำงานล่วงเวลา TPC", done:false,
+  ot:      {wrap:"otFrameWrap", link:"otOpen", rel:"TPC_OT_Dashboard.html", title:"รายงานชั่วโมงทำงานล่วงเวลา TPC", done:false,
             ready:"",
-            waiting:"ยังเปิดรายงานไม่เสร็จ ถ้ากรอบด้านล่างยังว่าง ให้กดเปิดเต็มจอ หรือเปิดไฟล์นี้จากโฟลเดอร์ 3.KPI บนเครื่องที่มีโฟลเดอร์ 2.OT อยู่ข้างกัน",
-            fallback:"เปิดรายงานไม่สำเร็จ ให้กดเปิดเต็มจอ หรือเปิดไฟล์นี้จากโฟลเดอร์ 3.KPI บนเครื่องที่มีโฟลเดอร์ 2.OT อยู่ข้างกัน"},
-  recruit: {wrap:"rcFrameWrap", link:"rcOpen", rel:"../1.Manpower & Recruit/TPC_Recruit_Exit_Dashboard.html", title:"ข้อมูลคนเข้างานและคนออกจากงาน TPC", done:false,
+            waiting:"กำลังโหลด...",
+            fallback:"เปิดรายงานไม่สำเร็จ"},
+  recruit: {wrap:"rcFrameWrap", link:"rcOpen", rel:"TPC_Recruit_Exit_Dashboard.html", title:"ข้อมูลคนเข้างานและคนออกจากงาน TPC", done:false,
             ready:"",
-            waiting:"ยังเปิดรายงานไม่เสร็จ ถ้ากรอบด้านล่างยังว่าง ให้กดเปิดเต็มจอ หรือเปิดไฟล์นี้จากโฟลเดอร์ 3.KPI บนเครื่องที่มีโฟลเดอร์ 1.Manpower & Recruit อยู่ข้างกัน",
-            fallback:"เปิดรายงานไม่สำเร็จ ให้กดเปิดเต็มจอ หรือเปิดไฟล์นี้จากโฟลเดอร์ 3.KPI บนเครื่องที่มีโฟลเดอร์ 1.Manpower & Recruit อยู่ข้างกัน"}
+            waiting:"กำลังโหลด...",
+            fallback:"เปิดรายงานไม่สำเร็จ"}
 };
 function ensureFrame(key){
   const f = FRAMES[key];
