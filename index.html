@@ -207,7 +207,7 @@ select:focus{outline:none;}
 }
 .tile-hero::before{background:radial-gradient(16rem 11rem at 112% -20%, rgba(255,255,255,0.20), transparent 66%);}
 .tile-hero .lbl,.tile-hero .cmp{color:#ffffff;}
-.tile-hero .num{font-size:62px; color:#ffffff;}
+.tile-hero .num{font-size:48px; color:#ffffff;}
 .tile-hero .cmp .up,.tile-hero .cmp .down{color:#ffffff; text-decoration:underline; text-underline-offset:3px;}
 
 /* ป้ายเกรดและป้ายสถานะ สีคู่กับคำเสมอ */
@@ -305,17 +305,7 @@ svg .clickable{cursor:pointer;}
   padding:5px 8px; min-height:26px;}
 .viewlink:hover{color:var(--green-deep);}
 
-/* ---------- คำอธิบายวิธีคิด ---------- */
-.explain{background:rgba(234,246,235,0.65); border:1px solid rgba(46,133,54,0.3);
-  border-radius:var(--r-md); padding:12px 16px; font-size:13.5px; line-height:1.8; margin-bottom:20px;
-  -webkit-backdrop-filter:var(--glass-blur-lite); backdrop-filter:var(--glass-blur-lite);}
-
-/* ---------- หน้านำเข้าข้อมูล ---------- */
-.steps{padding-left:24px;}
-.steps li{margin-bottom:12px; line-height:1.8;}
-.filebox{border:1.5px dashed rgba(46,133,54,0.6); border-radius:var(--r-lg); padding:26px; text-align:center;
-  background:linear-gradient(135deg,rgba(234,246,235,0.78),rgba(255,255,255,0.55));
-  -webkit-backdrop-filter:var(--glass-blur-lite); backdrop-filter:var(--glass-blur-lite);}
+/* ---------- ปุ่มทั่วไป ---------- */
 .btn{display:inline-block; font-family:inherit; font-size:14px; font-weight:600; color:#ffffff;
   border:1px solid rgba(255,255,255,0.28); border-radius:12px; padding:11px 24px; cursor:pointer;
   background:linear-gradient(135deg,var(--green-d),var(--green-deep));
@@ -326,18 +316,6 @@ svg .clickable{cursor:pointer;}
 .btn.sec{color:var(--green-dd); background:rgba(255,255,255,0.78); border:1px solid rgba(46,133,54,0.55);
   -webkit-backdrop-filter:var(--glass-blur-lite); backdrop-filter:var(--glass-blur-lite);}
 .btn.mini{font-size:12.5px; padding:7px 14px; border-radius:10px;}
-textarea{width:100%; min-height:130px; font-family:inherit; font-size:12px; color:var(--ink);
-  border:1px solid var(--glass-edge); border-radius:12px; padding:12px; line-height:1.7;
-  background:rgba(255,255,255,0.85);}
-.msg{font-size:13px; font-weight:500; margin-top:12px; display:none; border-radius:var(--r-sm); padding:9px 13px; line-height:1.7;}
-.msg.ok{display:block; background:rgba(234,246,235,0.9); color:var(--green-dd); border:1px solid rgba(46,133,54,0.32);}
-.msg.err{display:block; background:rgba(251,232,228,0.9); color:var(--red); border:1px solid rgba(184,65,46,0.32);}
-.msg.warn{display:block; background:rgba(253,246,224,0.95); color:#6b5100; border:1px solid rgba(217,163,0,0.42);}
-.import-banner{display:none; border-radius:var(--r-md); padding:10px 16px; font-size:13px; font-weight:500;
-  color:var(--ink); margin-bottom:20px; line-height:1.7;
-  background:linear-gradient(135deg,rgba(230,238,247,0.95),rgba(255,255,255,0.85));
-  -webkit-backdrop-filter:var(--glass-blur-lite); backdrop-filter:var(--glass-blur-lite);
-  border:1px solid rgba(47,93,138,0.5); box-shadow:var(--shadow-s);}
 
 /* ---------- กรอบหน้าโอทีและสรรหา ---------- */
 .openlink{color:var(--green-dd); font-weight:600; font-size:14px; text-decoration:underline; display:inline-flex; align-items:center; min-height:26px; padding:2px 4px;
@@ -357,8 +335,11 @@ textarea{width:100%; min-height:130px; font-family:inherit; font-size:12px; colo
   border:1px solid var(--glass-edge); border-radius:var(--r-md); background:#ffffff;}
 
 /* ---------- คำอธิบายลอย ---------- */
+#tip .tip-head{font-weight:700;}
+#tip ul{margin:5px 0 0 0; padding-left:16px;}
+#tip li{margin-top:3px; line-height:1.6;}
 #tip{position:fixed; z-index:50; color:#ffffff; font-size:12px; line-height:1.6;
-  padding:8px 12px; border-radius:var(--r-sm); pointer-events:none; display:none; max-width:300px;
+  padding:8px 12px; border-radius:var(--r-sm); pointer-events:none; display:none; max-width:330px;
   background:rgba(30,40,34,0.93); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
   border:1px solid rgba(255,255,255,0.18); box-shadow:var(--shadow-l);}
 
@@ -369,7 +350,7 @@ textarea{width:100%; min-height:130px; font-family:inherit; font-size:12px; colo
 @supports not ((-webkit-backdrop-filter:blur(2px)) or (backdrop-filter:blur(2px))){
   .card,.tbl-wrap{background:rgba(255,255,255,0.96);}
   .sidebar{background:rgba(255,255,255,0.97);}
-  select,textarea,.btn.sec,.filebox,.explain,.mchip,.fchip{background:rgba(255,255,255,0.96);}
+  select,.btn.sec,.mchip,.fchip{background:rgba(255,255,255,0.96);}
   th{background:#ffffff;}
 }
 
@@ -401,7 +382,7 @@ textarea{width:100%; min-height:130px; font-family:inherit; font-size:12px; colo
   .controls select{flex:1 1 100%; width:100%; max-width:100%;}
   .toolbar input[type="search"]{width:100%;}
   .tile .num{font-size:34px;}
-  .tile-hero .num{font-size:46px;}
+  .tile-hero .num{font-size:36px;}
   .subframe{height:70vh; min-height:420px;}
 }
 
@@ -410,7 +391,7 @@ textarea{width:100%; min-height:130px; font-family:inherit; font-size:12px; colo
   body{background:#ffffff !important; background-image:none !important;}
   .bg-field,.sidebar,.skip,#splash,#loadbar,.toolbar,.mbar{display:none !important;}
   main{padding:0;}
-  .card,.tbl-wrap,.filebox,.explain,.import-banner{
+  .card,.tbl-wrap{
     background:#ffffff !important; -webkit-backdrop-filter:none !important; backdrop-filter:none !important;
     border:1px solid #dce7dd !important; box-shadow:none !important;}
   .card::before,.tile-hero::before{display:none !important;}
@@ -460,6 +441,30 @@ svg.ic-lg{vertical-align:-6px;}
 #kpiTiles .lbl{font-size:15px;}
 #kpiTiles .cmp{font-size:14px;}
 #kpiTiles .chip{font-size:13px;}
+
+/* ตัวเลขเด่นตัวเดียว คำนำหน้าและคำหน่วยใช้ขนาดเท่าข้อความรอง ตามคำสั่ง 28 ส.ค. 2569 ข้อ 1 */
+#page-kpi #kpiTiles .num{font-size:30px; font-weight:700; letter-spacing:-0.2px; line-height:1.35;}
+#page-kpi #kpiTiles .num .num-lead,
+#page-kpi #kpiTiles .num .num-unit,
+#page-kpi #kpiTiles .num .num-note{
+  font-size:14px; font-weight:500; color:var(--ink2); letter-spacing:0; white-space:nowrap;}
+#page-kpi #kpiTiles .num .num-unit,
+#page-kpi #kpiTiles .num .num-note{margin-left:6px;}
+#page-kpi #kpiTiles .num .num-lead{margin-right:6px;}
+#kpiTiles .tile{cursor:help;}
+
+/* ตารางข้อมูลประกอบ ให้เห็นทันทีว่าแถวไหนสำคัญ ตามคำสั่ง 28 ส.ค. 2569 ข้อ 5 */
+#subTable tr.mainrow td{background:rgba(234,246,235,0.9); font-weight:700; color:var(--ink);
+  font-size:14px; border-bottom:1px solid rgba(23,73,29,0.2);}
+#subTable tr.mainrow td:first-child{box-shadow:inset 3px 0 0 var(--green-deep);}
+#subTable tr.mainrow:hover td{background:rgba(226,243,228,0.98);}
+#subTable tr.scorerow td{background:rgba(255,255,255,0.55); font-weight:600; color:var(--ink2);}
+#subTable tr.scorerow:hover td{background:rgba(240,248,241,0.9);}
+#subTable tbody.subs td{font-size:12px; color:var(--ink2); background:rgba(247,250,247,0.75);}
+#subTable tbody.subs td:first-child{padding-left:32px;}
+#subTable tbody.subs[hidden]{display:none;}
+.subs-bar{display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-top:12px;}
+.subs-note{font-size:12px; color:var(--ink2); line-height:1.7;}
 
 /* การ์ดคะแนนรวม */
 .tile-hero .hero-score{display:flex; align-items:baseline; gap:10px; margin:8px 0 4px 0;}
@@ -529,11 +534,9 @@ svg.ic-lg{vertical-align:-6px;}
 .wbar{position:relative;}
 .wbar i{position:absolute; top:0; bottom:0; width:2px; background:rgba(30,40,34,0.62); z-index:2;}
 .srcfoot{font-size:12px; color:var(--ink2); margin-top:12px; line-height:1.6;}
-.tile .cmp.warnline{color:#6b5100; background:rgba(253,246,224,0.95);
-  border:1px solid rgba(217,163,0,0.42); border-radius:8px; padding:8px 10px; margin-top:8px; line-height:1.6;}
 .sparkbox{margin-top:10px;}
 .spark-na{font-size:12px; color:var(--ink2); padding:14px 0;}
-.spark-cap{font-size:11.5px; color:var(--ink2); margin-top:4px; line-height:1.55;}
+.spark-cap{font-size:12px; color:var(--ink2); margin-top:4px; line-height:1.6;}
 .help-btn{display:inline-flex; align-items:center; justify-content:center; min-height:32px; padding:0 14px;
   border-radius:99px; border:1px solid var(--green-deep); background:#ffffff; color:var(--green-deep);
   font-family:inherit; font-size:12.5px; font-weight:600; cursor:pointer;}
@@ -573,13 +576,6 @@ svg.ic-lg{vertical-align:-6px;}
 .limit-wrap .datalimit{margin-top:8px;}
 .datalimit[hidden]{display:none;}
 
-/* กล่องหมายเหตุใต้ตารางข้อมูลประกอบ */
-.notebox{margin-top:12px; padding:12px 16px; border:1px solid var(--line); border-radius:var(--r-sm);
-  background:rgba(255,255,255,0.7);}
-.notebox .nt-head{font-size:12.5px; font-weight:600; color:var(--ink); margin-bottom:6px;}
-.notebox ul{margin:0; padding-left:20px;}
-.notebox li{font-size:12.5px; line-height:1.8; color:var(--ink2);}
-.notebox .nt-name{font-weight:600; color:var(--ink);}
 
 /* หัวหน้าเจาะรายตัวชี้วัด */
 .kpi-head{margin-bottom:18px;}
@@ -833,6 +829,10 @@ const ACT_SCALE = {2:100, 6:100};
    ข้อ 6 สูตรให้คะแนนของชีทคือ ผลจริงหารเป้า ซึ่งยิ่งสูงยิ่งดี ทิศทางจึงต้องเป็นไม่ต่ำกว่า
    ข้อ 9 เป็นคะแนนความพึงพอใจแบบเดียวกับข้อ 5 ซึ่งชีทกรอกไว้ว่าไม่ต่ำกว่า ข้อ 9 จึงต้องเป็นไม่ต่ำกว่าด้วย */
 const DIR_FIX = {6:">=", 9:">="};
+/* ข้อ 7 สองชีทตั้งชื่อกลับทางกัน ชีท KPI ใช้ จำนวนคนไม่ลาขาดงานออก ส่วนชีทแผนกใช้ จำนวนขาดงานออก
+   Yuth ตัดสินเมื่อ 27 ส.ค. 2569 ว่าตัวชี้วัดนี้วัดคนขาดงาน ไม่เกิน 8 คน
+   ชื่อที่แสดงจึงต้องตรงกับความหมายนั้น ส่วนชื่อเดิมของชีทเก็บไว้ที่ k.name0 เพื่อใช้ในกล่องข้อจำกัด */
+const NAME_FIX = {7:"จำนวนคนขาดงานออกทุกตำแหน่งงาน"};
 /* ช่วงคะแนนของเกรดสูงสุด Yuth กำหนดเมื่อ 23 ส.ค. 2569 แก้ที่บรรทัดนี้บรรทัดเดียว */
 const GRADE_TOP_RANGE = "120% ขึ้นไป";
 /* จำไว้ว่ากราฟใบไหนกำลังอยู่ในมุมมองตาราง เพื่อให้คงมุมมองเดิมเมื่อวาดใหม่ */
@@ -848,16 +848,14 @@ let deptDiffNote = "";
 /* สีชุดเดือนเมื่อเทียบกัน ลำดับตายตัวตามโทเคน CI */
 const MCOLORS = ["#3fae49","#2f5d8a","#d9a300"];
 /* ข้อจำกัดของข้อมูลรายตัวชี้วัด อ้างผลทวนสอบไฟล์ต้นทาง 21 ส.ค. 2569 */
+/* Yuth สั่งเมื่อ 28 ส.ค. 2569 ให้ตัดบรรทัดข้อจำกัดของข้อ 2 ข้อ 6 และข้อ 7 ออกจากตารางรายการ
+   เหลือไว้เฉพาะข้อ 1 และข้อ 9 ซึ่งเป็นข้อที่หน้านี้คิดคะแนนใหม่ต่างจากชีท */
 const KPI_LIMIT_SHORT = {
   1:"ช่องเป้าในชีทเป็นเปอร์เซ็นต์ คะแนนดิบจึงกลับทิศ หน้านี้คิดใหม่จากเป้าที่เป็นบาท",
-  2:"นับคนออกทุกประเภทเทียบจำนวนคนรวม คนออกส่วนใหญ่เป็นพนักงานรายวัน",
-  6:"ชีทกรอกทิศทางว่าไม่เกิน ขัดกับสูตรให้คะแนนของชีทเอง หน้านี้แก้เป็นไม่ต่ำกว่า",
   9:"ชีทกรอกทิศทางว่าไม่เกิน คะแนนจึงกลับทิศ หน้านี้คิดใหม่ด้วยสูตรเดียวกับข้อ 5"
 };
 const KPI_LIMIT = {
   1:"ชีท KPI เก็บเป้าของข้อนี้เป็น 0.05 หน่วยเปอร์เซ็นต์ ขณะที่ผลจริงเป็นบาท คะแนนดิบในชีทจึงอยู่ที่ 920 ถึง 1,096 และกลับทิศ คือเดือนที่ใช้เงินมากที่สุดได้คะแนนสูงสุด หน้านี้จึงคิดคะแนนข้อนี้ใหม่ด้วยสูตรเดียวกับข้ออื่น คือ 2 ลบ ผลจริงหารเป้า โดยใช้เป้า 1,937,795 บาทต่อเดือน จากชีท KPI 2569 แผนก ส่วนคะแนนที่นับเข้าคะแนนรวม แบบตามชีทยังใช้ค่าจากชีทตามเดิม ส่วนแบบไม่ตัดเพดานใช้คะแนนที่คิดใหม่นี้ รอเจ้าของชีทยืนยันวิธีคิด",
-  2:"อัตรานี้นับคนออกทุกประเภทเทียบจำนวนคนรวม คนออกส่วนใหญ่เป็นพนักงานรายวัน",
-  6:"ชีทกรอกทิศทางของข้อนี้ว่าไม่เกิน แต่สูตรให้คะแนนที่ชีทใช้จริง คือ ผลจริงหารเป้า ซึ่งให้คะแนนสูงขึ้นเมื่อเติมคนได้มากขึ้น สองอย่างนี้ขัดกันเอง หน้านี้ยึดสูตรที่ชีทใช้จริง จึงแสดงทิศทางว่าไม่ต่ำกว่า 70 เปอร์เซ็นต์ และไม่แตะคะแนนของข้อนี้ รอเจ้าของชีทยืนยัน",
   9:"ชีทกรอกทิศทางของข้อนี้ว่าไม่เกิน แล้วให้คะแนนด้วยสูตร 2 ลบ ผลจริงหารเป้า ซึ่งให้คะแนนสูงขึ้นเมื่อผลจริงต่ำลง ผลคือทั้งเจ็ดเดือนที่ผลจริงต่ำกว่าเป้า 90 คะแนน ชีทกลับให้คะแนนเกิน 100 ทุกเดือน ข้อ 5 ในชีทเดียวกันเป็นคะแนนความพึงพอใจ เป้า 90 คะแนนเท่ากัน และกรอกไว้ว่าไม่ต่ำกว่า พร้อมใช้สูตร ผลจริงหารเป้า หน้านี้จึงคิดคะแนนข้อ 9 ใหม่ด้วยสูตรเดียวกับข้อ 5 ส่วนคะแนนที่นับเข้าคะแนนรวม แบบตามชีทยังใช้ค่าจากชีทตามเดิม ส่วนแบบไม่ตัดเพดานใช้คะแนนที่คิดใหม่นี้ รอเจ้าของชีทยืนยันวิธีคิด"
 };
 /* ไอคอนวาดด้วย SVG ในไฟล์ ไม่ใช้อิโมจิและไม่ใช้ฟอนต์ไอคอน (ผู้ใช้สั่งชัด 21 ส.ค. 2569) */
@@ -900,6 +898,8 @@ const SCORE_FIX = {
 };
 function fixScores(){
   (S.kpis||[]).forEach(k=>{
+    if(k.name0==null) k.name0 = k.name;
+    if(NAME_FIX[k.no]) k.name = NAME_FIX[k.no];
     const f = SCORE_FIX[k.no];
     if(!f || !f.target) return;
     k.m.forEach(m=>{
@@ -951,9 +951,19 @@ function fmtActUnit(k,v){
   const t = fmtAct(k.no,v);
   if(v==null||t==="") return t;
   const u = unitDisplay(k);
-  if(!u) return t;
-  if(String(u).indexOf("%")>=0 || t.indexOf("%")>=0) return t;
-  return t+" "+u;
+  let out = t;
+  if(u && String(u).indexOf("%")<0 && t.indexOf("%")<0) out = t+" "+u;
+  return out + savePct(k, v);
+}
+/* ข้อ 1 ชีทเก็บเป้าไว้สองแบบ คือ 1,937,795 บาทต่อเดือน กับ ประหยัดร้อยละ 5
+   Yuth ตัดสินเมื่อ 27 ส.ค. 2569 ว่าเป้าทางการคือแบบเงินบาท ส่วนแบบร้อยละให้แสดงเป็นวงเล็บ
+   ประกอบตัวเลขผลจริง ร้อยละที่คิดได้ตรงกับแถว %Diff ในชีท 1. Costs HR ทุกเดือน */
+const SAVE_PCT = {1:1937795};
+function savePct(k, v){
+  const base = SAVE_PCT[k.no];
+  if(!base || v==null) return "";
+  const p = (base - v) / base * 100;
+  return p>=0 ? " (ประหยัด "+numf(p,1)+"%)" : " (เกินเป้า "+numf(-p,1)+"%)";
 }
 function fmtTarget(k){
   const dr = DIR_FIX[k.no] || k.dir;
@@ -971,6 +981,16 @@ function fmtTargetDisplay(k){
     if(b && b.target!=null) return "ไม่เกิน "+nf0.format(b.target)+" บาทต่อเดือน";
   }
   return fmtTarget(k);
+}
+/* แยกคำนำหน้าทิศทางและคำหน่วยออกจากตัวเลข เพื่อให้การ์ดมีตัวใหญ่ตัวเดียว คือตัวเลข
+   ส่วนคำประกอบใช้ขนาดเท่าข้อความรอง ตามคำสั่ง Yuth 28 ส.ค. 2569 ข้อ 1 */
+function splitLead(s){
+  const m = String(s==null?"":s).match(/^(ไม่เกิน|ไม่ต่ำกว่า)\s+([\s\S]+)$/);
+  return m? [m[1], m[2]] : ["", String(s==null?"":s)];
+}
+function splitUnit(s){
+  const m = String(s==null?"":s).match(/^([0-9.,%]+)\s+([\s\S]+)$/);
+  return m? [m[1], m[2]] : [String(s==null?"":s), ""];
 }
 function unitDisplay(k){
   if(k.no===1){
@@ -1002,13 +1022,36 @@ function fmtPts(v){
   const p = v*100;
   return numf(p, Math.abs(p-Math.round(p))<0.001? 0:1);
 }
+/* ขอบเขตเกรด เป็นแหล่งความจริงเดียว ทั้งการตัดสินเกรดและข้อความช่วงคะแนนบนหน้าจอ
+   ต้องอ่านจากที่นี่ที่เดียว จะได้ไม่มีวันขัดกันเอง
+   เหตุที่ต้องเลิกใช้ข้อความของชีท ชีทเขียนไว้ว่า 80-100% กับ 100-109%
+   ทำให้เลข 100 อยู่ในสองเกรด และ 109.5 ไม่มีเกรดรองรับ อีกทั้งขีดกลางผิดวินัยภาษา
+   Yuth สั่งให้เกลาให้ช่วงไม่ทับกันเมื่อ 27 ส.ค. 2569 ส่วนขอบเขตที่โค้ดใช้ตัดสินไม่เปลี่ยน */
+const GRADE_BANDS = [
+  {g:"C",   lo:null, hi:80},
+  {g:"B",   lo:80,   hi:100},
+  {g:"A",   lo:100,  hi:110},
+  {g:"A+",  lo:110,  hi:120},
+  {g:"A++", lo:120,  hi:null}
+];
 function deriveGrade(pct){
   if(pct==null) return "";
-  if(pct<80) return "C";
-  if(pct<100) return "B";
-  if(pct<110) return "A";
-  if(pct<120) return "A+";
+  for(let i=0; i<GRADE_BANDS.length; i++){
+    const b = GRADE_BANDS[i];
+    if(b.hi==null || pct<b.hi) return b.g;
+  }
   return "A++";
+}
+/* ข้อความช่วงคะแนนของเกรด สร้างจากขอบเขตจริงที่ใช้ตัดสิน ไม่ได้พิมพ์ทับ */
+function gradeRange(g){
+  for(let i=0; i<GRADE_BANDS.length; i++){
+    const b = GRADE_BANDS[i];
+    if(b.g!==g) continue;
+    if(b.lo==null) return "ต่ำกว่า "+b.hi+"%";
+    if(b.hi==null) return GRADE_TOP_RANGE;
+    return b.lo+"% ถึงน้อยกว่า "+b.hi+"%";
+  }
+  return "";
 }
 function gradeWord(g){
   const L = {"C":"ต้องปรับปรุงหรือพัฒนา","B":"ต่ำกว่ามาตรฐาน","A":"ได้ตามมาตรฐาน","A+":"ดีกว่ามาตรฐาน","A++":"ดีกว่ามาตรฐานมาก"};
@@ -1030,8 +1073,16 @@ function bindTips(root){
     el.addEventListener("mousemove",e=>{
       tip.innerHTML = el.getAttribute("data-tip");
       tip.style.display = "block";
-      const x = Math.min(e.clientX+14, window.innerWidth-280);
-      tip.style.left = x+"px"; tip.style.top = (e.clientY+14)+"px";
+      /* หนีบตำแหน่งจากขนาดจริงของกล่อง ไม่ใช่ค่าคงที่ เพราะกล่องแบบรายการหัวข้อย่อยสูงและกว้างกว่าเดิม
+         ถ้าใช้ค่าคงที่ กล่องจะยื่นพ้นขอบขวาหรือขอบล่างจนข้อความถูกตัดหาย */
+      const tw = tip.offsetWidth || 300, th = tip.offsetHeight || 60;
+      /* ใช้ความกว้างของพื้นที่แสดงผล ไม่ใช่ความกว้างหน้าต่าง เพราะหน้าต่างนับรวมแถบเลื่อนด้วย */
+      const vw = document.documentElement.clientWidth || window.innerWidth;
+      const vh = document.documentElement.clientHeight || window.innerHeight;
+      const x = Math.max(8, Math.min(e.clientX+14, vw - tw - 12));
+      let y = e.clientY + 14;
+      if(y + th > vh - 12) y = Math.max(8, e.clientY - th - 14);
+      tip.style.left = x+"px"; tip.style.top = y+"px";
     });
     el.addEventListener("mouseleave",()=>{ tip.style.display="none"; });
   });
@@ -1135,6 +1186,20 @@ function chartWidth(id, fallback){
     w = inner? Math.floor(inner * (fallback>600? 1 : 0.5)) : fallback;
   }
   return Math.max(320, Math.min(1160, w));
+}
+/* ความกว้างของกราฟเล็กในการ์ด ต้องเท่ากับความกว้างจริงของกล่อง ห้ามใช้ขั้นต่ำ 320 ของกราฟใหญ่
+   ถ้ากรอบภาพกว้างกว่ากล่อง เบราว์เซอร์จะย่อทั้งภาพ ตัวอักษรบนเส้นจึงเล็กกว่าที่ตั้งไว้ */
+function sparkWidth(id, fallback){
+  const el = $(id);
+  let w = el && el.clientWidth ? el.clientWidth : 0;
+  if(!w){
+    const mn = $("main");
+    const inner = mn && mn.clientWidth ? mn.clientWidth - 64 : 0;
+    w = inner? Math.floor(inner/4) - 60 : fallback;
+  }
+  /* ไม่ตั้งขั้นต่ำที่กว้างกว่ากล่องจริง เพราะกรอบภาพที่กว้างกว่ากล่องจะถูกย่อทั้งภาพ
+     ตัวอักษรบนเส้นจึงเล็กกว่าที่ตั้งไว้ เมื่อกล่องแคบให้ไปลดจำนวนป้ายแทน ไม่ใช่ย่อภาพ */
+  return Math.max(60, Math.min(460, w));
 }
 /* วางป้ายค่าไม่ให้ทับกันและไม่หลุดกรอบ */
 function placeLabels(pts, f, fmt){
@@ -1489,14 +1554,14 @@ function bindMonthClicks(rootId){
 
 /* ---------- เมนูโอทีและสรรหา แสดงสดจากไฟล์จริงข้างเคียง ---------- */
 const FRAMES = {
-  ot:      {wrap:"otFrameWrap", link:"otOpen", rel:"TPC_OT_Dashboard.html", title:"รายงานชั่วโมงทำงานล่วงเวลา TPC", done:false,
+  ot:      {wrap:"otFrameWrap", link:"otOpen", rel:"../2.OT/TPC_OT_Dashboard.html", title:"รายงานชั่วโมงทำงานล่วงเวลา TPC", done:false,
             ready:"",
-            waiting:"กำลังโหลด...",
-            fallback:"เปิดรายงานไม่สำเร็จ"},
-  recruit: {wrap:"rcFrameWrap", link:"rcOpen", rel:"TPC_Recruit_Exit_Dashboard.html", title:"ข้อมูลคนเข้างานและคนออกจากงาน TPC", done:false,
+            waiting:"ยังเปิดรายงานไม่เสร็จ ถ้ากรอบด้านล่างยังว่าง ให้กดเปิดเต็มจอ หรือเปิดไฟล์นี้จากโฟลเดอร์ 3.KPI บนเครื่องที่มีโฟลเดอร์ 2.OT อยู่ข้างกัน",
+            fallback:"เปิดรายงานไม่สำเร็จ ให้กดเปิดเต็มจอ หรือเปิดไฟล์นี้จากโฟลเดอร์ 3.KPI บนเครื่องที่มีโฟลเดอร์ 2.OT อยู่ข้างกัน"},
+  recruit: {wrap:"rcFrameWrap", link:"rcOpen", rel:"../1.Manpower & Recruit/TPC_Recruit_Exit_Dashboard.html", title:"ข้อมูลคนเข้างานและคนออกจากงาน TPC", done:false,
             ready:"",
-            waiting:"กำลังโหลด...",
-            fallback:"เปิดรายงานไม่สำเร็จ"}
+            waiting:"ยังเปิดรายงานไม่เสร็จ ถ้ากรอบด้านล่างยังว่าง ให้กดเปิดเต็มจอ หรือเปิดไฟล์นี้จากโฟลเดอร์ 3.KPI บนเครื่องที่มีโฟลเดอร์ 1.Manpower & Recruit อยู่ข้างกัน",
+            fallback:"เปิดรายงานไม่สำเร็จ ให้กดเปิดเต็มจอ หรือเปิดไฟล์นี้จากโฟลเดอร์ 3.KPI บนเครื่องที่มีโฟลเดอร์ 1.Manpower & Recruit อยู่ข้างกัน"}
 };
 function ensureFrame(key){
   const f = FRAMES[key];
@@ -1816,7 +1881,7 @@ function renderTrend(){
   }).join("");
   $("trendTable").innerHTML = `<div class="tbl-wrap"><table><thead><tr><th>เดือน</th><th class="num">คะแนนรวม${full? " (ไม่ตัดเพดาน)":" (ตามชีท)"}</th><th>เกรด</th><th>เทียบเดือนก่อน</th></tr></thead><tbody>${rows}</tbody></table></div>`;
   const items = S.legend.map(l=>{
-    const rng = l[0]? esc(l[0]) : (l[1]==="A++" ? GRADE_TOP_RANGE : "ไม่ได้ระบุช่วง");
+    const rng = gradeRange(l[1]);
     return `<li>${gradeIcon(l[1],16)}<span><span class="gk-range">เกรด ${esc(l[1])} ${rng}</span> ${esc(l[2])}</span></li>`;
   }).join("");
   $("gradeLegend").innerHTML =
@@ -1929,6 +1994,17 @@ function limitBox(text){
     + ` aria-label="ข้อจำกัดของข้อมูล กดเพื่อดูรายละเอียด" title="ข้อจำกัดของข้อมูล">${icon("note",16,"#8a6a00")}</button>`
     + `<div class="datalimit" id="${id}" hidden><span>ข้อจำกัดของข้อมูล ${esc(text)}</span></div></div>`;
 }
+/* ปุ่มกางแถวย่อยของตารางข้อมูลประกอบ ตามคำสั่ง Yuth 28 ส.ค. 2569 ข้อ 5 */
+document.addEventListener("click", e=>{
+  const b = e.target.closest && e.target.closest("#subMore");
+  if(!b) return;
+  const box = document.getElementById("subDetail");
+  if(!box) return;
+  const open = box.hasAttribute("hidden");
+  if(open) box.removeAttribute("hidden"); else box.setAttribute("hidden","");
+  b.setAttribute("aria-expanded", open? "true":"false");
+  b.textContent = (open? "ซ่อนรายละเอียดย่อย " : "ดูรายละเอียดย่อย ") + b.getAttribute("data-n") + " รายการ";
+});
 document.addEventListener("click", e=>{
   const b = e.target.closest && e.target.closest(".limit-btn");
   if(!b) return;
@@ -2052,8 +2128,10 @@ function openKpi(idx){
    ย้ายมาจากเส้นซ้อนในกราฟแท่ง เพื่อให้กราฟแท่งเหลือหน่วยเดียว คือผลจริง
    เส้นประคือระดับคะแนน 100 ซึ่งแปลว่าทำได้ตามเป้าพอดี */
 function sparkScore(vals, labels, hlSet, w){
-  const W = Math.max(140, w||210), H = 66;
-  const pad = {l:6, r:6, t:12, b:16};
+  /* Yuth สั่งเมื่อ 28 ส.ค. 2569 ให้พิมพ์ตัวเลขคะแนนลงบนเส้นด้วย
+     จึงต้องเผื่อที่ว่างด้านบนให้ตัวเลข และเพิ่มขอบซ้ายขวาไม่ให้ตัวเลขล้นกรอบ */
+  const W = Math.max(60, w||220), H = 92;
+  const pad = {l:14, r:14, t:30, b:22};
   const iw = W - pad.l - pad.r, ih = H - pad.t - pad.b;
   const nums = vals.filter(v=>v!=null);
   if(!nums.length) return '<div class="spark-na">ไม่มีข้อมูลคะแนนรายเดือน</div>';
@@ -2075,13 +2153,46 @@ function sparkScore(vals, labels, hlSet, w){
   const y100 = Y(100);
   g += `<line x1="${pad.l}" y1="${y100.toFixed(1)}" x2="${(pad.l+iw).toFixed(1)}" y2="${y100.toFixed(1)}" stroke="#a37800" stroke-width="1.5" stroke-dasharray="4 4"/>`;
   g += `<path d="${d.trim()}" fill="none" stroke="#2f5d8a" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>`;
+  /* ป้ายตัวเลขต้องไม่ทับกัน วิธีที่ใช้คือจองพื้นที่แนวนอนทีละป้าย ไม่ใช่เว้นเป็นจังหวะคงที่
+     เพราะการเว้นเป็นจังหวะคุมเฉพาะป้ายที่มาจากจังหวะ แต่ป้ายบังคับ คือเดือนที่ผู้ใช้เลือกและเดือนสุดท้าย
+     อาจตกลงมาติดกับป้ายอื่นได้ ป้ายที่จองพื้นที่ไม่ได้ให้ข้ามไป ดีกว่าพิมพ์ทับกัน */
+  const takenTop = [], takenBot = [];
+  const fits = (arr,a,b)=> !arr.some(t=> b > t[0]+0.5 && a < t[1]-0.5);
+  const anchOf = i => i===0? "start" : (i===vals.length-1? "end" : "middle");
+  const boxOf = (cx, wpx, anch)=> anch==="start"? [cx, cx+wpx] : (anch==="end"? [cx-wpx, cx] : [cx-wpx/2, cx+wpx/2]);
   vals.forEach((v,i)=>{
     if(v==null) return;
     const on = hlSet && hlSet.has(i);
-    g += `<circle cx="${X(i).toFixed(1)}" cy="${Y(v).toFixed(1)}" r="${on?4.2:2.4}" fill="${on?"#1e2822":"#2f5d8a"}"/>`;
-    if(on){
-      g += `<text x="${X(i).toFixed(1)}" y="${(H-4).toFixed(1)}" text-anchor="${i===0?"start":(i===vals.length-1?"end":"middle")}" font-size="10.5" font-weight="700" fill="#1e2822">${esc(labels[i])}</text>`;
-    }
+    g += `<circle cx="${X(i).toFixed(1)}" cy="${Y(v).toFixed(1)}" r="${on?4.2:2.6}" fill="${on?"#1e2822":"#2f5d8a"}"/>`;
+  });
+  /* ลำดับสิทธิ์ในการจองพื้นที่ เดือนที่ผู้ใช้เลือกก่อน แล้วเดือนสุดท้าย แล้วจึงเดือนที่เหลือจากซ้ายไปขวา */
+  const order = [];
+  const push = i => { if(i>=0 && vals[i]!=null && order.indexOf(i)<0) order.push(i); };
+  /* เดือนที่เลือกไล่จากใหม่ไปเก่า ให้ตรงลำดับกับชื่อเดือนที่ขอบล่าง
+     ไม่งั้นเมื่อกล่องแคบจนพิมพ์ได้แถวละใบ ตัวเลขข้างบนกับชื่อเดือนข้างล่างจะเป็นคนละเดือน */
+  for(let i=vals.length-1;i>=0;i--){ if(hlSet && hlSet.has(i)) push(i); }
+  push(vals.length-1);
+  vals.forEach((v,i)=>push(i));
+  order.forEach(i=>{
+    const v = vals[i], on = hlSet && hlSet.has(i);
+    const txt = numf(v,0), anch = anchOf(i);
+    const bx = boxOf(X(i), txtW(txt,12.5)+8, anch);
+    if(!fits(takenTop, bx[0], bx[1])) return;
+    takenTop.push(bx);
+    /* ตีเส้นขาวรอบตัวอักษร กันตัวเลขจมกับเส้นกราฟ */
+    const ty = Math.max(13, Y(v) - 10);
+    g += `<text x="${X(i).toFixed(1)}" y="${ty.toFixed(1)}" text-anchor="${anch}" font-size="12.5" font-weight="${on?800:600}"`
+      + ` fill="${on?"#1e2822":"#2f5d8a"}" stroke="#ffffff" stroke-width="3" paint-order="stroke">${txt}</text>`;
+  });
+  /* ชื่อเดือนที่ผู้ใช้เลือก พิมพ์ที่ขอบล่าง เดือนใหม่กว่ามีสิทธิ์จองก่อน */
+  const hls = [];
+  vals.forEach((v,i)=>{ if(v!=null && hlSet && hlSet.has(i)) hls.push(i); });
+  hls.reverse().forEach(i=>{
+    const lb = String(labels[i]==null?"":labels[i]), anch = anchOf(i);
+    const bx = boxOf(X(i), txtW(lb,12)+8, anch);
+    if(!fits(takenBot, bx[0], bx[1])) return;
+    takenBot.push(bx);
+    g += `<text x="${X(i).toFixed(1)}" y="${(H-5).toFixed(1)}" text-anchor="${anch}" font-size="12" font-weight="700" fill="#1e2822">${esc(lb)}</text>`;
   });
   /* ไม่พิมพ์เลข 100 ซ้อนบนเส้นประ เพราะกราฟเล็กมากและจะทับจุดของเดือนท้าย
      คำอธิบายใต้กราฟบอกไว้แล้วว่าเส้นประคือคะแนน 100 */
@@ -2103,37 +2214,67 @@ function renderKpiPage(){
      ไม่งั้นสองหน้าในไฟล์เดียวกันจะบอกคนละคะแนนของข้อเดียวกัน */
   const gpNow = gotPts(k,i);
   const wWord = trendMode==="full"? "น้ำหนักเต็ม" : "จาก";
-  /* แบบตามชีท ใช้คะแนนถ่วงน้ำหนักที่ชีทบันทึกไว้ตรงตัว เพื่อให้ตรงกับแถวรวมของชีท
-     แต่ถ้าหน้านี้แก้คะแนนของข้อนั้นแล้ว ค่าที่ชีทบันทึกจะไม่ตรงกับคะแนนที่แสดงอยู่
-     ต้องบอกให้ชัด ไม่งั้นผู้อ่านจะเจอตัวเลขสองตัวข้างกันที่ขัดกันเองโดยไม่มีคำอธิบาย */
-  let sheetGap = "";
-  if(trendMode!=="full" && k.weight>0 && ratio!=null && k.m[i][3]!=null){
-    const shown = capR(ratio), sheetShare = k.m[i][3]/k.weight;
-    if(Math.abs(shown - sheetShare) > 0.01){
-      sheetGap = "ค่านี้เป็นค่าที่ชีทบันทึกไว้ ซึ่งคิดจากคะแนนก่อนแก้ ไม่ตรงกับคะแนน "
-        + fmtScore(ratio, k.no) + " ที่แสดงอยู่ กดปุ่มไม่ตัดเพดาน เพื่อดูค่าที่คิดจากคะแนนที่แก้แล้ว";
-    }
-  }
+  /* Yuth สั่งเมื่อ 28 ส.ค. 2569 ข้อ 3 ให้ตัดกล่องข้อจำกัดของข้อมูลใต้ป้ายสถานะออก
+     และข้อ 7 ให้ตัดบรรทัดเตือนเรื่องคะแนนที่ชีทบันทึกไว้ในการ์ดน้ำหนักออก */
   $("kpiStatus").innerHTML = `<span class="badge ${bcls}">${bico} ${bword}</span>
-    <span class="badge-sub">เดือน ${esc(S.months[i])} ได้ ${fmtScore(ratio,k.no)} เทียบเป้า และเก็บได้ ${fmtPts(gpNow)} ${wWord} ${numf(k.weight*100,0)} คะแนนของข้อนี้</span>`
-    + limitBox(KPI_LIMIT[k.no]);
+    <span class="badge-sub">เดือน ${esc(S.months[i])} ได้ ${fmtScore(ratio,k.no)} เทียบเป้า และเก็บได้ ${fmtPts(gpNow)} ${wWord} ${numf(k.weight*100,0)} คะแนนของข้อนี้</span>`;
+  /* วิธีคิดของแต่ละการ์ด เก็บไว้ในคำอธิบายลอย ผู้อ่านชี้เมาส์จึงเห็น ตามคำสั่ง 28 ส.ค. 2569 ข้อ 4 */
+  const dirNow = DIR_FIX[k.no] || k.dir;
+  let scoreRule;
+  if(k.target===0)
+    scoreRule = "ข้อนี้ตั้งเป้าเป็นศูนย์ จึงหารไม่ได้ ชีทให้ 100% เมื่อไม่มีเหตุการณ์ และ 0% เมื่อมี";
+  else if(dirNow===">=")
+    scoreRule = "คะแนน คือ ผลจริง หารด้วย เป้าหมาย แล้วคูณ 100 ยิ่งสูงยิ่งดี";
+  else
+    scoreRule = "คะแนน คือ 2 ลบด้วย ผลจริงหารเป้าหมาย แล้วคูณ 100 ยิ่งต่ำยิ่งดี";
+  /* Yuth สั่งให้เป็นรายการหัวข้อย่อย (bullet) จึงใช้ ul และ li ไม่ใช่การขึ้นบรรทัดเปล่า
+     ค่าที่ประกอบเป็นข้อความต้องใช้เครื่องหมายคำพูดเดี่ยว เพราะทั้งก้อนอยู่ในค่าของแอตทริบิวต์ */
+  const tipList = (items)=> "<span class='tip-head'>วิธีคิด</span><ul>"
+    + items.filter(Boolean).map(x=>"<li>"+x+"</li>").join("") + "</ul>";
+  const tipTarget = tipList([
+    "ยกค่าเป้าหมายจากชีทตรงตัว ไม่ปรับค่า",
+    "คำว่า ไม่เกิน หรือ ไม่ต่ำกว่า มาจากทิศทางของตัวชี้วัด",
+    "ค่านี้คือเส้นประบนกราฟผลจริงด้านล่าง",
+    k.no===1? "ข้อนี้ใช้เป้าเป็นบาท จากชีท KPI 2569 แผนก เพราะผลจริงเป็นบาท" : ""
+  ]);
+  const tipAct = tipList([
+    "ยกผลจริงของเดือน " + esc(S.months[i]) + " จากชีทตรงตัว ไม่ปรับค่า",
+    "ป้ายถึงเป้าหมายหรือไม่ ตัดสินจากผลจริงเทียบเป้าหมาย",
+    SAVE_PCT[k.no]? "ร้อยละในวงเล็บ คือ เป้าหมาย ลบ ผลจริง แล้วหารด้วยเป้าหมาย" : ""
+  ]);
+  const tipScore = tipList([
+    scoreRule,
+    "100 คือทำได้ตามเป้าพอดี เกิน 100 คือดีกว่าเป้า",
+    "เส้นในกราฟเล็ก คือคะแนนของทุกเดือน ตัวเลขบนเส้นคือคะแนนของเดือนนั้น"
+  ]);
+  const tipWeight = tipList([
+    "ข้อนี้มีน้ำหนัก " + numf(k.weight*100,0) + " คะแนน ในคะแนนรวม 100 คะแนน",
+    "คะแนนที่เก็บได้ คือ คะแนนของเดือน คูณด้วย น้ำหนัก",
+    "แบบตามชีท ตัดเพดานที่ 100 ส่วนแบบไม่ตัดเพดาน ใช้คะแนนจริง",
+    "ตอนนี้หน้านี้ใช้แบบ " + esc(modeWord())
+  ]);
+  const [tLead, tRest] = splitLead(fmtTargetDisplay(k));
+  const [tVal, tUnit] = splitUnit(tRest);
+  const aVal = fmtAct(k.no, act);
+  const uDisp = unitDisplay(k);
+  const aUnit = (act!=null && uDisp && String(uDisp).indexOf("%")<0 && aVal.indexOf("%")<0)? uDisp : "";
+  const aNote = savePct(k, act).trim();
   $("kpiTiles").innerHTML = `
-    <div class="card span3 tile"><div class="lbl">เป้าหมายปี 2569</div>
-      <div class="num" style="font-size:31px">${fmtTargetDisplay(k)}</div>
-      <div class="cmp">หน่วย ${esc(unitDisplay(k))}</div></div>
-    <div class="card span3 tile"><div class="lbl">ผลจริงเดือน ${esc(S.months[i])}</div>
-      <div class="num" style="font-size:31px">${fmtActUnit(k,act)}</div>
+    <div class="card span3 tile" data-tip="${tipTarget}"><div class="lbl">เป้าหมายปี 2569</div>
+      <div class="num">${tLead? `<span class="num-lead">${tLead}</span>`:""}${tVal}${tUnit? `<span class="num-unit">${tUnit}</span>`:""}</div>
+      <div class="cmp">ชี้เมาส์ที่การ์ดเพื่อดูวิธีคิด</div></div>
+    <div class="card span3 tile" data-tip="${tipAct}"><div class="lbl">ผลจริงเดือน ${esc(S.months[i])}</div>
+      <div class="num">${aVal}${aUnit? `<span class="num-unit">${esc(aUnit)}</span>`:""}${aNote? `<span class="num-note">${esc(aNote)}</span>`:""}</div>
       <div class="cmp">${statusChipSev(ratio, k.no)}</div></div>
-    <div class="card span3 tile"><div class="lbl">คะแนนเดือน ${esc(S.months[i])}</div>
-      <div class="num" style="font-size:31px">${fmtScore(ratio,k.no)}</div>
+    <div class="card span3 tile" data-tip="${tipScore}"><div class="lbl">คะแนนเดือน ${esc(S.months[i])}</div>
+      <div class="num">${fmtScore(ratio,k.no)}</div>
       <div class="cmp">100 คือทำได้ตามเป้าพอดี</div>
       <div class="sparkbox" id="scoreSpark"></div>
       <div class="spark-cap">เส้นคะแนนรายเดือนของข้อนี้ เส้นประคือคะแนน 100</div></div>
-    <div class="card span3 tile"><div class="lbl">น้ำหนักในคะแนนรวม</div>
-      <div class="num" style="font-size:31px">${numf(k.weight*100,0)} คะแนน</div>
+    <div class="card span3 tile" data-tip="${tipWeight}"><div class="lbl">น้ำหนักในคะแนนรวม</div>
+      <div class="num">${numf(k.weight*100,0)}<span class="num-unit">คะแนน</span></div>
       <div class="cmp">เก็บได้ ${fmtPts(gpNow)} ${wWord} ${numf(k.weight*100,0)} คะแนน</div>
-      <div class="cmp">วิธีคิด ${esc(modeWord())}</div>
-      ${sheetGap? `<div class="cmp warnline">${esc(sheetGap)}</div>` : ""}</div>`;
+      <div class="cmp">วิธีคิด ${esc(modeWord())}</div></div>`;
   const t = TLINE[k.no]||{};
   const scale = ACT_SCALE[k.no]||1;
   const vals = k.m.map(m=>m[0]!=null? m[0]*scale : null);
@@ -2142,7 +2283,7 @@ function renderKpiPage(){
   $("actSub").textContent = t.lbl || "";
   /* คะแนนรายเดือนย้ายไปอยู่ในการ์ดคะแนนเดือนแล้ว กราฟแท่งจึงเหลือหน่วยเดียว คือผลจริง */
   const rvals = k.m.map(m=>scoreVal(m[2], k.no));
-  $("scoreSpark").innerHTML = sparkScore(rvals, S.months, hl, chartWidth("scoreSpark", 210));
+  $("scoreSpark").innerHTML = sparkScore(rvals, S.months, hl, sparkWidth("scoreSpark", 220));
   $("actChart").innerHTML = barChart(vals, S.months, colors, {
     width:w6, ref:t.v, highlight:hl, dim:monthPicked, labelEvery: w6<460?2:1, tickSuffix: scale===100? "%" : "",
     hlStroke: mi => k.m[mi][2]==null? "#566058" : (k.m[mi][2]>=1? "#17491d" : "#7d3427"),
@@ -2171,7 +2312,7 @@ function renderKpiPage(){
     const a = k.m[mi][0];
     const st = statusWord(k.m[mi][2], k.no);
     return `<tr class="${selMonths.includes(mi)?"mon-hl":""}"><td>${esc(m)}</td>`
-      + `<td class="num">${fmtAct(k.no,a)}</td>`
+      + `<td class="num">${fmtAct(k.no,a)}${savePct(k,a)}</td>`
       + `<td class="num">${fmtScore(k.m[mi][2], k.no)}</td>`
       + `<td class="num">${fmtPts(gotPts(k,mi))} ${wWord} ${numf(k.weight*100,0)}</td>`
       + `<td>${icon(st.ic,14,st.col)} ${esc(st.w)}</td></tr>`;
@@ -2183,24 +2324,26 @@ function renderKpiPage(){
 
   const blk = (S.dept||[]).find(b=>b.no===k.no);
   const head = S.months.map((m,mi)=>`<th class="num ${selMonths.includes(mi)?"mon-hl":""}">${esc(m)}</th>`).join("");
-  const rowHtml = (r, main, force)=>{
+  /* ลำดับความสำคัญของตาราง ตามคำสั่ง Yuth 28 ส.ค. 2569 ข้อ 5
+     แถวหลักคือตัวชี้วัดข้อนี้ แถวรองคือคะแนนเทียบเป้า ส่วนแถวย่อยเป็นตัวประกอบ ซ่อนไว้ก่อน */
+  const rowHtml = (r, cls, force)=>{
     const cells = S.months.map((m,mi)=>`<td class="num ${selMonths.includes(mi)?"mon-hl":""}">${force? force(mi) : fmtGeneric(r.vals[mi], r.unit)}</td>`).join("");
     const tg = force? "100%" : (r.target!=null? fmtGeneric(r.target, r.unit) : "");
-    return `<tr class="${main?"":"subrow"}"><td>${esc(r.name)}</td><td class="num">${tg}</td><td>${esc(r.unit||"")}</td>${cells}</tr>`;
+    return `<tr class="${cls}"><td>${esc(r.name)}</td><td class="num">${tg}</td><td>${esc(r.unit||"")}</td>${cells}</tr>`;
   };
   deptDiffNote = "";
-  const flagRows = [];
-  let sub = `<table><thead><tr><th>รายการ</th><th class="num">เป้าหมาย</th><th>หน่วย</th>${head}</tr></thead><tbody>`;
-  sub += rowHtml({name:"ทำได้กี่เปอร์เซ็นต์ของเป้า", unit:"%"}, false, mi=>fmtScore(k.m[mi][2], k.no));
+  $("subTblSub").textContent = "";
+  let mainRows = "", subRows = "", subCount = 0;
+  if(blk) mainRows += rowHtml(blk, "mainrow");
+  mainRows += rowHtml({name:"ทำได้กี่เปอร์เซ็นต์ของเป้า", unit:"%"}, "scorerow", mi=>fmtScore(k.m[mi][2], k.no));
   if(blk){
-    sub += rowHtml(blk, true);
     /* แถวย่อยที่ว่างทุกเดือน ไม่ให้ประโยชน์กับผู้อ่าน จึงไม่แสดง
-       แถวที่ชีทบันทึกเป็นมีหรือไม่มี ไม่ใช่ตัวเลข ย้ายไปกล่องหมายเหตุด้านล่าง ตามคำสั่ง 24 ส.ค. 2569 */
+       แถวที่ชีทบันทึกเป็นมีหรือไม่มี ไม่ใช่ตัวเลข Yuth สั่งเมื่อ 28 ส.ค. 2569 ข้อ 6 ให้ตัดกล่องหมายเหตุออก */
     blk.subs.forEach(r=>{
       const vs = r.vals.slice(0,S.months.length);
       if(vs.every(v=>v==null||v==="")) return;
-      if(vs.every(v=>v==null||v===""||v===true||v===false)){ flagRows.push(r); return; }
-      sub += rowHtml(r,false);
+      if(vs.every(v=>v==null||v===""||v===true||v===false)) return;
+      subRows += rowHtml(r,"subrow"); subCount++;
     });
     const diffs = [];
     S.months.forEach((mn,mi)=>{
@@ -2221,9 +2364,32 @@ function renderKpiPage(){
       const over = blk.subs.some(r=>typeof r.vals[mi]==="number" && r.vals[mi]>0);
       if(over) zeroBad.push(mn);
     });
-    if(zeroBad.length) notes.push("เดือน "+zeroBad.join(" ")+" แถวหลักบันทึกเป็นศูนย์ แต่แถวย่อยยังมีค่า");
+    /* Yuth ตัดสินเมื่อ 27 ส.ค. 2569 ว่าให้ยึดแถวหลักซึ่งเป็นค่าจริง จึงไม่ใช่ข้อขัดแย้งที่ค้างอยู่อีก
+       แต่ยังต้องบอกไว้ ไม่งั้นผู้อ่านที่เห็นแถวย่อยมีค่าจะสงสัยว่าทำไมแถวหลักเป็นศูนย์ */
+    if(zeroBad.length) notes.push("เดือน "+zeroBad.join(" ")+" แถวย่อยมีค่าแต่แถวหลักบันทึกเป็นศูนย์ หน้านี้ยึดแถวหลักเป็นค่าจริง ตามที่ HRBP ตัดสินเมื่อ 27 สิงหาคม 2569");
+    /* แถวย่อยที่เป็นส่วนต่างจากเป้า ต้องเท่ากับ ผลจริง ลบ เป้า ของแถวหลักเสมอ
+       ถ้าไม่เท่า แปลว่าเซลล์ในชีทพิมพ์คลาด ต้องบอกไว้
+       เพราะผู้อ่านจะเห็นตัวเลขนี้อยู่บนจอเดียวกับร้อยละที่การ์ดคำนวณจากผลจริงกับเป้า
+       Yuth สั่งเมื่อ 27 ส.ค. 2569 ว่าให้คงค่าตามชีทไว้ แต่ต้องมีหมายเหตุกำกับ */
+    const diffBad = [];
+    if(blk.target!=null){
+      blk.subs.forEach(r=>{
+        if(String(r.name||"").trim().toLowerCase().indexOf("diff")!==0) return;
+        S.months.forEach((mn,mi)=>{
+          const v = r.vals[mi], main = blk.vals[mi];
+          if(typeof v!=="number" || typeof main!=="number") return;
+          const want = main - blk.target;
+          if(Math.abs(v-want) > Math.max(1, Math.abs(want)*0.001))
+            diffBad.push(mn+" ชีทบันทึก "+fmtGeneric(v, r.unit)+" แต่คำนวณได้ "+fmtGeneric(want, r.unit));
+        });
+      });
+    }
+    /* Yuth สั่งเมื่อ 27 ส.ค. 2569 ว่าให้เป็นหมายเหตุเล็กๆ พอ จึงเขียนสั้นที่สุดที่ยังตามรอยได้ */
+    if(diffBad.length) notes.push("แถวส่วนต่างจากเป้า "+diffBad.join(" และ ")+" หน้านี้คงค่าตามชีท");
     const norm = t => String(t==null?"":t).replace(/\s+/g,"").toLowerCase();
-    if(norm(k.name)!==norm(blk.name)) notes.push("ใช้ชื่อตัวชี้วัดต่างกัน ชีท KPI ใช้ "+k.name+" ส่วนชีท KPI 2569 แผนก ใช้ "+blk.name);
+    /* ต้องอ้างชื่อเดิมที่ชีทบันทึกไว้ ไม่ใช่ชื่อที่หน้านี้แก้เพื่อแสดงผล ไม่งั้นจะกลายเป็นอ้างผิด */
+    const nm0 = k.name0 || k.name;
+    if(norm(nm0)!==norm(blk.name)) notes.push("ใช้ชื่อตัวชี้วัดต่างกัน ชีท KPI ใช้ "+nm0+" ส่วนชีท KPI 2569 แผนก ใช้ "+blk.name);
     /* เทียบเป้าที่หน้านี้วาดเป็นเส้นเป้าหมาย กับเป้าในตารางข้อมูลประกอบ
        ไม่เทียบจากช่องเป้าดิบของชีท KPI เพราะชีทเก็บบางข้อเป็นสัดส่วน บางข้อเป็นร้อยละ จึงเทียบตรงตัวไม่ได้ */
     const tl = TLINE[k.no], tb = blk.target;
@@ -2237,20 +2403,16 @@ function renderKpiPage(){
       }
     }
     if(notes.length) deptDiffNote = "ชีท KPI กับชีท KPI 2569 แผนก "+notes.join(" และ ")+" กราฟกับการ์ดด้านบนใช้ตัวเลขจากชีท KPI ส่วนตารางนี้ใช้ตัวเลขจากชีท KPI 2569 แผนก";
-    $("subTblSub").textContent = "";
-  } else {
-    $("subTblSub").textContent = "";
   }
-  sub += "</tbody></table>";
-  $("subTable").innerHTML = sub;
-  /* กล่องหมายเหตุ เก็บรายละเอียดที่ชีทบันทึกเป็นมีหรือไม่มี ซึ่งใส่ในตารางตัวเลขแล้วอ่านยาก */
-  if(flagRows.length){
-    const items = flagRows.map(r=>{
-      const ms = S.months.filter((m,mi)=> r.vals[mi]===true).map(m=>esc(m));
-      return `<li><span class="nt-name">${esc(r.name)}</span> `
-        + (ms.length? `บันทึกไว้ในเดือน ${ms.join(" ")}` : `ไม่มีเดือนใดบันทึกไว้`) + `</li>`;
-    }).join("");
-    $("subNote").innerHTML = `<div class="notebox"><div class="nt-head">หมายเหตุ รายละเอียดที่ชีทบันทึกเป็นมีหรือไม่มี</div><ul>${items}</ul></div>`;
+  const thead = `<thead><tr><th>รายการ</th><th class="num">เป้าหมาย</th><th>หน่วย</th>${head}</tr></thead>`;
+  const subsBody = subRows? `<tbody class="subs" id="subDetail" hidden>${subRows}</tbody>` : "";
+  $("subTable").innerHTML = `<table>${thead}<tbody>${mainRows}</tbody>${subsBody}</table>`;
+  /* ปุ่มกางแถวย่อย วางไว้ใต้ตาราง ผู้อ่านจึงเห็นแถวสำคัญก่อน แล้วค่อยกดดูตัวประกอบ */
+  if(subCount){
+    $("subNote").innerHTML = `<div class="subs-bar">`
+      + `<button type="button" class="help-btn" id="subMore" data-n="${subCount}" aria-expanded="false" aria-controls="subDetail">`
+      + `ดูรายละเอียดย่อย ${subCount} รายการ</button>`
+      + `<span class="subs-note">สองแถวบนคือตัวเลขหลักของตัวชี้วัดข้อนี้ รายละเอียดย่อยเป็นตัวประกอบการคำนวณ</span></div>`;
   } else {
     $("subNote").innerHTML = "";
   }
